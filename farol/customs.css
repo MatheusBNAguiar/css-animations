@@ -1,17 +1,37 @@
 .inicia45 {
   animation-name: rotaciona360inicia45;
+  left: 50px;
+  top: 400px;
+  margin: auto;
 }
 
 .inicia90 {
   animation-name: rotaciona360inicia90;
+  right: 100px;
+  top: 200px;
+  margin: auto;
 }
 
 .inicia135 {
   animation-name: rotaciona360inicia135;
+  right: 400px;
+  top: 600px;
+  margin: auto;
 }
 
 .inicia180 {
   animation-name: rotaciona360inicia180;
+  left: 300px;
+  top: 400px;
+  margin: auto;
+}
+
+.vaiEVolta {
+  background: blue;
+  right: 600px;
+  bottom: 0px;
+  margin: auto;
+  animation-name: animacaoVaiEVolta;
 }
 
 @keyframes rotaciona360inicia45 {
@@ -47,5 +67,14 @@
   }
   100% {
     transform: rotate(540deg);
+  }
+}
+
+@keyframes animacaoVaiEVolta {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
   }
 }
