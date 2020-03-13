@@ -1,0 +1,51 @@
+.inicia45 {
+  animation-name: rotaciona360inicia45;
+}
+
+.inicia90 {
+  animation-name: rotaciona360inicia90;
+}
+
+.inicia135 {
+  animation-name: rotaciona360inicia135;
+}
+
+.inicia180 {
+  animation-name: rotaciona360inicia180;
+}
+
+@keyframes rotaciona360inicia45 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes rotaciona360inicia90 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes rotaciona360inicia135 {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(495deg);
+  }
+}
+
+@keyframes rotaciona360inicia180 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
