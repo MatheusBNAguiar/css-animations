@@ -1,47 +1,43 @@
-/*
- * Container para testes, a posição deve ser relative
- */
-.container {
+#container {
   height: 100vh;
   position: relative;
-  background: black;
+  background: rgba(66, 66, 66, 0.99);
+}
+
+#container.move-state {
+  cursor: grab;
 }
 
 .farol {
+  transform: rotate(-90deg);
   position: absolute;
-  height: 60px;
-  width: 10px;
+  height: 30px;
+  width: 4px;
   border-radius: 5px;
   background: #ffffff;
 
-  /* Código da animação */
-  animation-name: rotaciona360; /* Animação utilizada, para mudar ponto inicial e final mude o nome */
-  animation-duration: 5s; /* Tempo da animação ocorrer */
-  animation-iteration-count: infinite; /* Animação ocorrerá infinitamente */
-  animation-timing-function: linear; /* Animação sera gradual e linear, sem animações bruscas */
-
   /* Esse é o código de posicionamento do farol, podendo ser alterado diversas vezes ou sequer usado no código principal*/
   left: 0;
-  top: 50px;
+  top: 10px;
   right: 0;
   margin: 0 auto;
 }
 
 /*
- * Traço no meio da linha branca
- */
+* Traço no meio da linha branca
+*/
 .farol::before {
   content: "";
   position: absolute;
 
-  width: 30px;
-  height: 10px;
+  width: 19px;
+  height: 3px;
   border-radius: 10px;
   background: #ffffff;
 
   top: 0;
   bottom: 0;
-  left: -10px;
+  left: -8px;
   margin: auto 0;
 }
 
@@ -52,25 +48,15 @@
   content: "";
   position: absolute;
 
-  height: 300px;
-  width: 800px;
-  border-radius: 0 50px 50px 0;
+  height: 150px;
+  width: 400px;
+  border-radius: 0 40px 40px 0;
 
-  left: 10px;
+  left: 4px;
   top: 0;
   bottom: 0;
   margin: auto 0;
 
-  background: linear-gradient(90deg, rgba(256, 256, 256, 0.5) 0%, transparent 100%);
+  background: linear-gradient(90deg, rgba(256, 256, 256, 0.3) 0%, transparent 100%);
   clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%);
-}
-
-/* Keyframe para gerar a animação, para novas animações copie esse código e modifique o nome */
-@keyframes rotaciona360 {
-  0% {
-    transform: rotate(0deg); /* Onde começa */
-  }
-  100% {
-    transform: rotate(360deg); /* Onde acaba, caso o valor inicial seja diferente de 0 adicione 360 ao valor final */
-  }
 }
